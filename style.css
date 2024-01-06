@@ -1,0 +1,373 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    --white: #ffffff;
+    --orange: #ff9a6c;
+    --text: #263138;
+    --red: #ff725e;
+
+}
+
+.center{
+    width: 90%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+
+body{
+    color: var(--text)
+}
+
+/*inicio menu da pagina*/
+header{
+    background-color: var(--orange);
+    padding: 24px 0;
+    position: relative;
+    z-index: 10;
+}
+
+header .center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav{
+    display: flex;
+    gap: 64px
+}
+
+header nav.menu-desktop a{
+    text-decoration: none;
+    color: var(--white);
+    transition: .4s;
+    font-weight: 600;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+}
+
+header nav a:hover{
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
+.btn-abrir-menu {
+    display: none;
+}
+/*final menu da pagina*/
+
+/*inicio da sessao inicio da pagina*/
+#inicio{
+    position: relative;
+    padding: 40px 0 200px;
+}
+
+.inicio .center{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.absolute{position: absolute; bottom: 0px; left: 0; width: 100%; z-index: -10;}
+
+h1,h2{
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 32px;
+    line-height: 40px;
+}
+
+.paragrafo{
+    line-height: 24px;
+    margin-bottom: 32px;
+}
+
+.botao{
+    background-color: var(--red); 
+    border-radius: 8px; 
+    padding: 16px 32px; 
+    color: var(--white);
+    text-decoration: none;
+    transition: .4s;
+    display: inline-block;
+}
+
+.botao-transparente{
+    background-color: transparent;
+    color: var(--red);
+    padding: 16px 32px;
+    text-underline-offset: 4px;
+    transition: .4s;
+    display: inline-block;
+}
+
+.botao:hover,
+.botao-transparente:hover{
+    opacity: .8;
+    transform: scale(1.2);
+}
+/*final da sessao inicio da pagina*/
+
+/*inicio da sessao clinica da pagina*/
+.clinica .center{
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 0;
+}
+
+#clinica li{
+    margin-bottom: 16px;
+    margin-left: 32px;
+}
+/*final da sessao clinica da pagina*/
+
+/*inicio da sessao farmacia da pagina*/
+#farmacia{
+    padding: 64px 0;
+    text-align: center;
+}
+
+#farmacia img{
+    margin: 32px auto;
+}
+
+#farmacia .paragrafo{
+    max-width: 950px;
+    margin: 0 auto;
+}
+/*final da sessao farmacia da pagina*/
+
+/*inicio da sessao duvidas da pagina*/
+.duvidas .center{
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 0;
+}
+
+.item__faq{
+    position: relative;
+}
+
+.item__faq h3{
+    border: 2px solid var(--red);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 24px;
+}
+
+.item__faq img{
+    position: absolute;
+    top: 32px;
+    right: 24px;
+    transition: .2s;
+}
+
+.item__faq .paragrafo{
+    border-right: 1px solid var(--red);
+    border-bottom: 1px solid var(--red);
+    border-left: 1px solid var(--red);
+    border-radius: 0 0 8px 8px;
+    margin-top: -8px;
+    padding: 0px 24px;
+    height: 0;
+    opacity: 0;
+    transition: .2s;
+}
+
+.item__faq.active .paragrafo{
+    height: fit-content;
+    opacity: 1;
+    padding: 24px;
+}
+
+.item__faq.active img{
+    transform: rotate(180deg);
+}
+/*final da sessao duvidas da pagina*/
+
+/*inicio da sessao rodape da pagina*/
+.sitemap{
+    background-color: rgba(197, 103, 62, 0.692);
+    padding: 64px 0;
+}
+
+.sitemap .center{
+    display: flex;
+    gap: 80px;
+    justify-content: space-between;
+}
+
+.sitemap img,
+.sitemap .titulo{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.sitemap nav a{
+    color: var(--text);
+    display: block;    
+    text-decoration: none;
+    max-width: 350px;
+    transition: .4s;
+}
+
+.sitemap nav a:hover{
+    color: var(--red);
+    font-weight: 500;
+}
+
+.sitemap nav a:not(:last-child),
+.sitemap p:not(:last-child){
+    margin-bottom: 16px;
+}
+
+.sitemap p{
+    max-width: 350px;
+    line-height: 24px;
+}
+
+.sitemap p a{
+    color: var(--red);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.copyright{
+    background: var(--text);
+    color: var(--white);
+    padding: 24px 0;
+    text-align: center;
+}
+
+.copyright a{
+    color: var(--orange)
+}
+/*final da sessao rodape da pagina*/
+
+/*versao do modo responsivo*/
+.btn__mobile{
+    display: none;
+    position: absolute;
+    top: 18px;
+    right: 24px;
+}
+
+/*estilo menu mobile */
+
+.btn-abrir-menu i{
+    color: #fff;
+    font-size: 30px;
+}
+
+.menu-mobile {
+    background-color: #ff915e;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu {
+    display: block;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 4%;
+}
+
+.menu-mobile .btn-fechar i {
+    color: #fff;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.menu-mobile nav ul {
+    width: 100%;
+    text-align: right;
+    list-style: none;
+}
+
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+    text-decoration: none;
+}
+
+
+.menu-mobile nav ul li a:hover{
+    background-color: #fff;
+    color: var(--orange);
+}
+
+.overlay-menu {
+    background-color: #000000c5;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+
+@media only screen and (max-width: 940px){
+    #inicio .center,
+    #clinica .center,
+    #duvidas .center,
+    .sitemap .center{
+        flex-wrap: wrap;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .btn-abrir-menu {
+        display: block;
+    }
+    
+    header .menu-desktop{
+        display: none;
+    }
+    .container__btns{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    h1, h2,.paragrafo, footer .col p, .titulo, .sitemap nav a{
+        text-align: center;
+    }
+    footer .col{
+        width: 100%;
+    }
+    .sitemap p, .sitemap nav a{
+        max-width: initial;
+    }
+    .sitemap .center{
+        gap: 40px
+    }
+    
+    @media only screen and (max-width: 640px){
+        .item__faq h3 {
+            padding: 24px 45px 24px 24px;
+            font-size: 16px;
+        }
+    }
+}
